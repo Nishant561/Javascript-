@@ -1,0 +1,119 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul{
+    list-style: none;
+}
+
+:root{
+    --primary-color: blue;
+
+}
+
+body{
+    background-color: gray;
+}
+
+
+
+.max-width{
+    max-width: 1200px;
+    margin:0 auto;
+    
+}
+
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+   box-shadow: 0 0 10px rgba(0,0,0,.8);
+   padding: 0 10px;
+   background-color: #fff;
+}
+
+.nav .name{
+    color: var(--primary-color);
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    gap:6rem;
+}
+
+.link li a{
+    position: relative;
+
+}
+
+.link li a::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width .5s;
+    
+    
+}
+
+.link li a:not(.active):hover::after{
+    width: 100%;
+}
+
+.active{
+    color: var(--primary-color);
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background-color: #fff;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding:10px 20px;
+    position: absolute;
+    bottom: 10px;
+    height: 50px;
+
+    
+}
+
+.btn{
+    padding:5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.generate,
+.copy{
+    cursor: pointer;
+    
+}
+
+.colorCode{
+    color:blue;
+}

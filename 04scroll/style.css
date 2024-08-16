@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:20px 40px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.links li a{
+    color: #fff;
+}
+
+#home{
+    background: url(pexels-anastasiya-gepp-654466-2036646.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bars{
+    display: none;
+    background: transparent;
+    padding:5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.full{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.fixed-navbar{
+    background: lightcoral;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+
+
+.title{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+
+.one{
+    background: pink;
+}
+
+.two{
+    background: blue;
+}
+
+.three{
+    background: green;
+}
+
+@media screen and (max-width:500px) {
+
+    .bars{
+        display: block;
+    }
+
+    .link-container{
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        background-color: aqua;
+        padding: 10px 20px;
+        transform: translateX(-100%);
+        transition: transform .5s;
+        background-color: pink;
+        
+
+    }
+
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* ***----Content------*** */
+
+.content-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:calc(100vh - 50px);
+    width: 100%;
+    flex-direction: column;
+    
+    color: #fff;
+    gap: 10px;
+
+}
+
+.scroll-project{
+    font-size: 3rem;
+}
+
+
+.content{
+    width: 50%;
+    text-align: center;
+}
+
+.explore-button{
+    padding:10px 20px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: 3px solid pink;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.explore-button:hover{
+    background-color: rgba(243, 241, 241, .5)
+}
+
+.top-arrow{
+    display: none;
+    width: fit-content;
+    padding:20px 20px;
+    background: lightseagreen;
+    border-radius: 13px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3rem;
+    right:2rem;
+    position: fixed;
+
+
+}

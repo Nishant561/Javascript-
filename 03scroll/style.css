@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+     
+}
+
+:root{
+    --primary-color : yellow;
+}
+
+body{
+    overflow-x: hidden;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color:  #fff;
+}
+
+li{
+    list-style: none;
+}
+
+.fixed-navbar{
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+}
+
+.main-section{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(pexels-jmendezrf-1536619.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index:1;
+}
+
+.main-section::after{
+    content: '';
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    
+    width: 100%;
+    height:100%;
+    z-index: -1;
+
+}
+
+nav{
+    position: absolute;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+}
+
+
+.logo h3{
+    color: #000;
+}
+
+.link-container{
+    display: flex;
+    align-items: center;
+   
+    
+    
+    
+}
+
+.link-container i{
+    color: #000;
+    
+}
+
+
+.links{
+    display: flex;
+    align-items: center;
+    gap:18px;
+}
+
+.content-section{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.short-description{
+    text-align: center;
+}
+
+.heading{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    
+}
+
+.content-description{
+    padding:10px 20px;
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size:1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border ease-in-out .3s;
+    flex-wrap: nowrap;
+}
+
+.bars{
+    display: none;
+    border: none;
+    background: transparent;
+}
+.bars i {
+    font-size: 1rem;
+}
+
+
+.content-description:hover{
+    border-color: var(--primary-color);
+}
+
+@media screen and (max-width: 500px) {
+    nav{
+        padding:10px 5px;
+        background-color: #fff;
+        color:#000;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+        
+    }
+
+    .logo h3{
+        color: #000;
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .short-description{
+        font-size:12px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .bars{
+        display: block;
+    }
+
+    
+
+    .links{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .link-container{
+        position: absolute;
+        background-color: #000;
+        top:50px;
+        width: 100%;
+        height: 0;
+    overflow: hidden;
+        
+       
+        transition: ease-in-out .5s;
+    }
+
+}
+
+#about,
+#contact,
+#tours{
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    padding-top:20px;
+}
+
+.headers{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color:var(--primary-color)
+}
